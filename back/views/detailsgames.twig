@@ -1,0 +1,17 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+    <h1 class="text-primary">La pages de tous les jeux</h1>
+    <div class="row">
+            <div class="col-4">
+                <h3 class="text-success">{{ results.title }}</h3>
+                <p><img width="25%" src="{{ results.picture }}"/></p>
+                <p><b>Description :</b><br> {{ results.description }}</p>
+                <p><b>Prix :</b> {{ results.price }} €</p>
+                <p><b>En stock :</b> {{ results.stock }}</p>
+                <a class="btn btn-danger" href="/allgames/">Retour</a>
+            </div>
+            <br />
+    </div>
+{% endblock %}

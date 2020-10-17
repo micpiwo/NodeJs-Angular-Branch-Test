@@ -1,0 +1,23 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+    <h1 class="text-primary">La pages de tous les jeux</h1>
+    <div class="row">
+        {% for games in results %}
+            <div class="col-4">
+                <h3 class="text-success">{{ games.title }}</h3>
+                <p><img width="25%" src="{{ games.picture }}" alt="" title=""/></p>
+                <p><b>Description :</b><br> {{ games.description }}</p>
+                <p><b>Prix :</b> {{ games.price }} €</p>
+                <p><b>En stock :</b> {{ games.stock }}</p>
+                <a class="btn btn-warning" href="/allgames/detailsgames/{{ games.id }}">Détails du jeux</a>
+                <br><br>
+                <a class="btn btn-primary" href="/allgames/editgames/{{ games.id }}">Editer</a>
+                <br><br>
+                <a class="btn btn-danger" href="/allgames/{{ games.id }}">Supprimer</a>
+            </div>
+            <br />
+        {% endfor %}
+    </div>
+{% endblock %}

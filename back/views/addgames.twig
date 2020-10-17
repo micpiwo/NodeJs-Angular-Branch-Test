@@ -1,0 +1,38 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    <h1>{{title}}</h1>
+    <p>Bienvenue sur votre espace d'administation : {{title}}</p>
+    <h2 class="text-danger">Ajouter un jeux</h2>
+    <form method="post">
+
+        <div class="form-group">
+            <label for="title">Nom du jeux :</label>
+            <input id="title" class="form-control" type="text" placeholder="titre" name="title">
+        </div>
+
+
+        <div class="form-group">
+            <label for="description">description :</label>
+            <textarea id="description" rows="5" class="form-control" type="text-area" placeholder="description" name="description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="picture">URL Web Image (copier addresse de l'image) :</label>
+            <input id="picture" class="form-control" type="text" placeholder="image" name="picture">
+        </div>
+
+
+        <div class="form-group">
+            <label for="price">Prix du jeux :</label>
+            <input id="price" class="form-control" type="text" placeholder="325,25 €" name="price">
+        </div>
+
+        <div class="form-group">
+            <label for="stock">En stock :</label>
+            <input id="stock" class="form-control" type="text" placeholder="OUI ou NON" name="stock">
+            <br>
+            <button class="btn btn-danger" type="submit">Valider</button>
+        </div>
+    </form>
+{% endblock %}
